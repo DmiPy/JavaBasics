@@ -20,7 +20,7 @@ public class Schleifen {
 				rhombus();
 				break;
 			case "B":
-				palindrome();
+				binary();
 				break;
 			default:
 				System.out.println("Wrong match");
@@ -96,6 +96,21 @@ public class Schleifen {
 			}
 		}
 			
+	}
+	
+	public static void binary() {
+	    System.out.println("Enter the number you want to see in binary system:");
+	    int number = scan.nextInt();
+
+	    StringBuilder reversedBinary = new StringBuilder();
+	    
+	    while (number != 0) {
+	        int remainder = number % 2;
+	        reversedBinary.append(remainder);
+	        number /= 2;
+	    }
+
+	    System.out.println("Binary representation: " + reversedBinary.reverse());
 	}
 
 }
