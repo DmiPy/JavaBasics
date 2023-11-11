@@ -79,12 +79,6 @@ public class Scooter {
 		}
 		
 		System.out.println("Thank you that you have chosen the " + choiceOffer.getName());
-	
-		// написать цикл while, для того, чтобы дать пользователям выбор
-		// типо точно ли они хотят выбрать этот оффер
-		
-
- 
         	
 	}
 	public static Offer findBestOffer(double kilometers, Offer[] offersArray) {
