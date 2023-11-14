@@ -95,6 +95,10 @@ public class Schleifen {
 	            System.out.println();
 			}
 		}
+		else {
+			System.out.println("Wrong value, try again.");
+			rhombus();
+		}
 			
 	}
 	
