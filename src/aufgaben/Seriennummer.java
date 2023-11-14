@@ -48,7 +48,7 @@ public class Seriennummer {
             }
 		}
 		else {
-			System.out.println("Invalid serial number format or length");
+			System.out.println("Invalid serial number format or length.");
 		}
 
 	}
