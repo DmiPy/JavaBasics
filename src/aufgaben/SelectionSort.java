@@ -44,21 +44,25 @@ public class SelectionSort {
 	}
 	public static void selectionSort(int[] array) {
 		int index = 0;
-		while (index != array.length - 1) {
+		int len = array.length;
+		while (index != len - 1) {
+			
 			int current_element = array[index];
 			int lowest_value = Integer.MAX_VALUE;
-			int lowest_value_id = Integer.MAX_VALUE;
-			for (int inner_index = index; inner_index < array.length; inner_index++) {
+			int lowest_value_id = index;
+			
+			for (int inner_index = index; inner_index < len; inner_index++) {
 				if (array[inner_index] < lowest_value) {
 					lowest_value = array[inner_index];
 					lowest_value_id = inner_index;
 				}
 			}
 			
-			int temp_variable = lowest_value;
-			array[lowest_value_id] = current_element;
-			array[index] = temp_variable;
-			
+			if (lowest_value_id != index) {
+				int temp_variable = lowest_value;
+				array[lowest_value_id] = current_element;
+				array[index] = temp_variable;
+			}
 			
 			index++;
 		}
