@@ -34,6 +34,7 @@ public class Fibonacci {
 				prev1 = prev2;
 				prev2 = fib_int;
 			}
+			
 			return fib_int;
 		}
 	}
