@@ -5,9 +5,9 @@ public class Binomial {
 	public static Scanner input = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		System.out.println("Enter n: ");
+		System.out.print("Enter n: ");
 		int n = input.nextInt();
-		System.out.println("Enter k: ");
+		System.out.print("Enter k: ");
 		int k = input.nextInt();
 		System.out.println(fakultaet(n));
 		System.out.println(binomialFakultaet(n, k));
