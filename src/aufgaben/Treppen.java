@@ -1,4 +1,5 @@
 package aufgaben;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Treppen {
@@ -8,8 +9,11 @@ public class Treppen {
 	public static void main(String[] args) {
 		System.out.print("Enter the length of stairs:");
 		int len = input.nextInt();
-		System.out.println(treppenLaufen(len));
-		
+		System.out.println("Number of opportunities with max step 2 is: " + treppenLaufen(len));
+		System.out.print("Enter the new max Step:");
+		int stepSize = input.nextInt();
+		System.out.println("Number of opportunities with max step " + stepSize + " "
+				+ "is: " +treppenRennen(len,stepSize)); 
 	}
 	
 	public static int treppenLaufen(int len) {
@@ -35,9 +39,22 @@ public class Treppen {
 		}
 	}
 	
-	public static int treppenRennen(int len, int stepSize) {
-		return 0;
-		
+	public static int treppenRennen(int len, int maxStepSize) {
+	    if (len <= 2) {
+	        return len;
+	    } else {
+	        int[] dp = new int[len + 1];
+	        dp[1] = 1;
+	        dp[2] = 2;
+	        
+	        for (int i = 3; i <= len; i++) {
+	        	dp[i] = 0;
+	        	for (int j = 1; j <= maxStepSize && j <= i; j++) {
+	        		dp[i] += dp[i-j];
+	        	}
+	        }
+	        return dp[len];
+	    }
 	}
 
 }
