@@ -1,13 +1,12 @@
 package aufgaben;
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Sieb {
 	
 	public static Scanner scan = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-        System.out.println("How long must set of natural numbers be?");
+        System.out.println("How long must be set of natural numbers ?");
         int n = scan.nextInt();
         int[] primNums = new int[n];
         int startNum = 2;
